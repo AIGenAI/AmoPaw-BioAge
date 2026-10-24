@@ -1,0 +1,34 @@
+{
+  "project": "AmoPaw BioAge synthetic prototype",
+  "data_warning": "All input data are synthetic. Metrics demonstrate pipeline behavior only and are not evidence of real-world biological-age accuracy.",
+  "pet_level_split": true,
+  "counts": {
+    "all_virtual_pets": 240,
+    "age_labeled_pets": 211,
+    "train_age_labeled_pets": 148,
+    "validation_age_labeled_pets": 30,
+    "test_age_labeled_pets": 33
+  },
+  "validation": {
+    "Ridge": {
+      "n_pets": 30,
+      "MAE_years": 2.1248,
+      "RMSE_years": 2.9183,
+      "R2": -0.0775
+    },
+    "CatBoost": {
+      "n_pets": 30,
+      "MAE_years": 2.0053,
+      "RMSE_years": 2.7011,
+      "R2": 0.077
+    },
+    "selected_by_validation_MAE": "CatBoost"
+  },
+  "held_out_test": {
+    "n_pets": 33,
+    "MAE_years": 2.4512,
+    "RMSE_years": 3.0034,
+    "R2": -0.2145
+  },
+  "note": "Do not report this as validated pet biological age. Target is chronological age in a small dataset."
+}

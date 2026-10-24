@@ -1,0 +1,9 @@
+services:
+  bioage-api:
+    build: .
+    container_name: amopaw-bioage-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - BIOAGE_ENV=prototype
